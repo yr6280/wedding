@@ -75,7 +75,11 @@
                             </div>
                         </div>
 
+                        
                         <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
+                            활발한 봄에 만난 우리가 <span id="d_day" style="font-size: 1.2em;">000</span>일 째 되는 오늘, 부부로 새로이 시작하려고 합니다.
+                            <br/>
+                            <br/>
                             청춘은 전인 어디 이는 우리의 보이는 이상의 아니다.
                             내는 가치를 튼튼하며, 이상, 바이며, 것은 것은 것이다.
                             꽃 얼음이 너의 품으며, 그들의 뼈 바이며, 것이다.
@@ -92,6 +96,29 @@
                         </div>
                         <p style="margin: 0.5em; letter-spacing: 0.4em; font-size: 0.7em;">wedding march</p>
                     </div>
+
+                    <script>
+                        function d_days()
+                        {
+                            var today = new Date();
+
+                            var year = today.getFullYear();
+                            var month = ('0' + (today.getMonth() + 1)).slice(-2);
+                            var day = ('0' + today.getDate()).slice(-2);
+
+                            const date1 = new Date(2015, 9, 1);
+                            const date2 = new Date(year, month, day);
+                            
+                            const elapsedMSec = date2.getTime() - date1.getTime(); // 172800000
+                            const elapsedDay = elapsedMSec / 1000 / 60 / 60 / 24; // 2
+                            
+                            document.getElementById("d_day").innerText = elapsedDay;
+                        }
+
+                        window.onload = function() {
+                            d_days();
+                        };
+                    </script>
                     <!-- 메인소개 끝 -->
 
 
@@ -189,6 +216,16 @@
                                         <img
                                         src="assets/img/gallary/wedding_img7.jpg"
                                         alt="Gallery image 7"
+                                        class=""
+                                        style="width: 100%; height: 100%; object-fit: cover;"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-3 mt-1 photo_img">
+                                    <a onclick="gallary_main(8)">
+                                        <img
+                                        src="assets/img/gallary/wedding_img8.jpg"
+                                        alt="Gallery image 8"
                                         class="active w-100"
                                         />
                                     </a>
@@ -196,7 +233,7 @@
                             </div>
                         </div>
                         <!-- 갤러리 스크립트 끝 -->
-                        
+
                     </div>
                     <!-- 갤러리 끝-->
 
@@ -207,6 +244,9 @@
                     <div class="post-preview">
                         <h4 class="post-title">오시는 길</h4>
                         <br/>
+                        <div style="margin: auto; display:block; width: 6em;">
+                            <img class="img-fluid" src="assets/img/rabbit.png" alt="..." />
+                        </div>
                         <h4>수원파티웨딩유 0층 뭐뭐뭐홀</h4>
                         <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em; margin-top: 0%">
                             경기 수원시 권선구 세화로 218<br/>
@@ -215,7 +255,7 @@
                         
                         <!-- 지도api -->
                         <div id="map" style="width:100%; height:350px; background-color: blanchedalmond;"></div>
-                        
+                        <!--
                         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f3b0140629ed817c42e2b163c3544ab0&libraries=services"></script>
                         <script>
                         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -255,7 +295,7 @@
                             } 
                         });    
                         </script>
-                        
+                        -->
                         <!-- 지도api 끝 -->
 
                         <div style="text-align: left; padding: 0em 2em 1em;">
@@ -319,7 +359,7 @@
                                         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close" onclick="modal_toggle('none')"></button>
                                     </div>
                                     <div class="modal-body" >
-                                        <input id="account" hidden="true" value="Modal body text goes here.">
+                                        <input type='text' id="account" value="" style="position:absolute; left:-9999px">
                                         <p id="acc_text"></p>
                                     </div>
                                     <div class="modal-footer">
@@ -383,9 +423,12 @@
                             function acc_copy()
                             {
                                 account_num = document.getElementById("account").select();
-                                
-                                //document.execCommand('copy');
+                                document.execCommand('copy');
+                                //window.navigator.clipboard.writeText(account);
                                 //window.navigator.clipboard.writeText(account_num); //계좌번호 클립보드에 복사
+
+                                var text = document.getElementById("account").value;
+                                //console.log(text);
 
                                 document.getElementById("modal_msg").innerText = "복사되었습니다.";
                             }
