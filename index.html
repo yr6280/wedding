@@ -15,6 +15,10 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
+
+    <!--modal background-->
+    <div class="modal" tabindex="-1" id="modal_back" style="background-color: gray; width: 100%; height: 100%; position: fixed; z-index: 999; opacity: 0.5;"></div>
+    
     <body>
         <!-- Page Header-->
         <header class="masthead">
@@ -23,13 +27,15 @@
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="site-heading">
-                            <p style="font-family: 'NanumMyeongjo_Y'; font-size: 1.8rem; margin: 0.5em; color: #090303; text-align: center;">wedding</p>
-                        </div>
-                        
+
                         <div style="text-align: center;">
                             <img style="max-width: 8%;" src="assets/img/botanica.png">
                         </div>
+                        <div class="site-heading">
+                            <p style="font-family: 'NanumMyeongjo_Y'; font-size: 1.8rem; margin: 0.5em; color: #090303; text-align: center;">wedding</p>
+                        </div>
+                    
+                        
                         <br/>
 
                         <div class="site-heading">
@@ -348,92 +354,6 @@
                     <div class="post-preview">
                         <h4 class="post-title">마음 전하실 곳</h4>
                         <p class="post-subtitle">축하의 마음 언제나 감사드립니다</p>
-                        
-                        <!--계좌번호 modal-->
-                        <div class="modal" tabindex="-1" id="acc_modal">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <input id="acc_val" value="" hidden="true">
-                                    <div class="modal-header" style="padding: 0em 1em;">
-                                        <p class="modal-title" id="acc_title" style="margin: 0em;">Modal title</p>
-                                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close" onclick="modal_toggle('none')"></button>
-                                    </div>
-                                    <div class="modal-body" >
-                                        <input type='text' id="account" value="" style="position:absolute; left:-9999px">
-                                        <p id="acc_text"></p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <p id="modal_msg" style="font-size: 0.8em;"></p>
-                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" onclick="modal_toggle('none')">닫기</button>
-                                        <button type="button" class="btn btn-primary" onclick="acc_copy()">복사</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--계좌번호 modal 끝-->
-                        <!--계좌번호 modal script-->
-                        <script>
-                            function account_check(val)
-                            {
-                                var acc_val = '';
-                                if(val == 0)
-                                {
-                                    acc_val = document.getElementById("acc_val").value;
-                                }else{
-                                    acc_val = val;
-                                }
-
-                                var acc_text = '';
-                                if(acc_val == 1) //정필기
-                                {
-                                    acc_text = 'AA은행 1234-1110';
-                                    acc_title_text = '<p>신랑 <span style="font-weight: bold; font-size: 1.5rem;">정필기</span></p>';
-                                }else if(acc_val == 2)   //김남이
-                                {
-                                    acc_text = 'BB은행 5678-2222';
-                                    acc_title_text = '<p>신부 <span style="font-weight: bold; font-size: 1.5rem;">김남이</span></p>';
-                                }else if(acc_val == 3)   //신랑측 혼주
-                                {
-                                    acc_text = '가가은행 1111-2222';
-                                    acc_title_text = '<p style="margin-bottom: 0em;">신랑 정필기의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">가가가</span></p>';
-                                    acc_title_text += '<p style="margin-top: 0em;">신랑 정필기의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">나나나</span></p>';
-                                }else if(acc_val == 4)   //신부측 혼주
-                                {
-                                    acc_text = '나나은행 3333-4444';
-                                    acc_title_text = '<p style="margin-bottom: 0em;">신부 김남이의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">다다다</span></p>';
-                                    acc_title_text += '<p style="margin-top: 0em;">신부 김남이의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">라라라</span></p>';
-                                }
-                                
-                                document.getElementById("acc_val").value = acc_val;
-
-                                //modal set
-                                document.getElementById("acc_text").innerText = acc_text;
-                                document.getElementById("acc_title").innerHTML = acc_title_text;
-                                document.getElementById("account").value = acc_text;
-
-                                modal_toggle('block');
-                            }
-
-                            function modal_toggle(val)
-                            {
-                                document.getElementById("modal_msg").innerText = "";
-                                document.getElementById("acc_modal").style.display = val;
-                            }
-
-                            function acc_copy()
-                            {
-                                account_num = document.getElementById("account").select();
-                                document.execCommand('copy');
-                                //window.navigator.clipboard.writeText(account);
-                                //window.navigator.clipboard.writeText(account_num); //계좌번호 클립보드에 복사
-
-                                var text = document.getElementById("account").value;
-                                //console.log(text);
-
-                                document.getElementById("modal_msg").innerText = "복사되었습니다.";
-                            }
-                        </script>
-                        <!--계좌번호 modal script 끝-->
 
                         <!-- 신랑신부 -->
                         <div>
@@ -474,6 +394,92 @@
                             </div>
                         </div>
                     </div>
+
+                    <!--계좌번호 modal-->
+                    
+                    <div class="modal" tabindex="-1" id="acc_modal">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <input id="acc_val" value="" hidden="true">
+                                <div class="modal-header" style="padding: 0em 1em;">
+                                    <p class="modal-title" id="acc_title" style="margin: 0em;">Modal title</p>
+                                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close" onclick="modal_toggle('none')"></button>
+                                </div>
+                                <div class="modal-body" >
+                                    <input type='text' id="account" value="" style="position:absolute; left:-9999px">
+                                    <p id="acc_text"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <p id="modal_msg" style="font-size: 0.8em;"></p>
+                                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" onclick="modal_toggle('none')">닫기</button>
+                                    <button type="button" class="btn btn-primary" onclick="acc_copy()">복사</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--계좌번호 modal 끝-->
+                    <!--계좌번호 modal script-->
+                    <script>
+                        function account_check(val)
+                        {
+                            var acc_val = '';
+                            if(val == 0)
+                            {
+                                acc_val = document.getElementById("acc_val").value;
+                            }else{
+                                acc_val = val;
+                            }
+
+                            var acc_text = '';
+                            if(acc_val == 1) //정필기
+                            {
+                                acc_text = 'AA은행 1234-1110';
+                                acc_title_text = '<p>신랑 <span style="font-weight: bold; font-size: 1.5rem;">정필기</span></p>';
+                            }else if(acc_val == 2)   //김남이
+                            {
+                                acc_text = 'BB은행 5678-2222';
+                                acc_title_text = '<p>신부 <span style="font-weight: bold; font-size: 1.5rem;">김남이</span></p>';
+                            }else if(acc_val == 3)   //신랑측 혼주
+                            {
+                                acc_text = '가가은행 1111-2222';
+                                acc_title_text = '<p style="margin-bottom: 0em;">신랑 정필기의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">가가가</span></p>';
+                                acc_title_text += '<p style="margin-top: 0em;">신랑 정필기의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">나나나</span></p>';
+                            }else if(acc_val == 4)   //신부측 혼주
+                            {
+                                acc_text = '나나은행 3333-4444';
+                                acc_title_text = '<p style="margin-bottom: 0em;">신부 김남이의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">다다다</span></p>';
+                                acc_title_text += '<p style="margin-top: 0em;">신부 김남이의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">라라라</span></p>';
+                            }
+                            
+                            document.getElementById("acc_val").value = acc_val;
+
+                            //modal set
+                            document.getElementById("acc_text").innerText = acc_text;
+                            document.getElementById("acc_title").innerHTML = acc_title_text;
+                            document.getElementById("account").value = acc_text;
+
+                            modal_toggle('block');
+                        }
+
+                        function modal_toggle(val)
+                        {
+                            document.getElementById("modal_msg").innerText = "";
+                            document.getElementById("modal_back").style.display = val;
+                            document.getElementById("acc_modal").style.display = val;
+                        }
+
+                        function acc_copy()
+                        {
+                            account_num = document.getElementById("account").select();
+                            document.execCommand('copy');
+                            
+                            document.getElementById("modal_msg").innerText = "복사되었습니다.";
+                        }
+                    </script>
+                    <!--계좌번호 modal script 끝-->
+
+
                     <!-- 마음 전하실 곳 끝-->
             
                     <hr class="my-4" />
