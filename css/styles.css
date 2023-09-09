@@ -10682,9 +10682,9 @@ footer {
 
 header.masthead {
   position: relative;
-  margin-bottom: 3rem;
-  padding-top: calc(8rem + 57px);
-  padding-bottom: 8rem;
+  margin-bottom: 2rem;
+  padding-top: calc(2rem + 57px);
+  padding-bottom: 2rem;
   background: no-repeat center center;
   /* background-color: #6c757d; */
   background-size: cover;
@@ -10838,7 +10838,7 @@ header.masthead .post-heading .meta a {
 .thank_box
 {
   display: inline-block;
-  padding: 0em 2em;
+  padding: 0em;
 }
 
 .thank_box > p
@@ -10859,6 +10859,8 @@ header.masthead .post-heading .meta a {
 .post-subtitle
 {
   letter-spacing: 0.4em;
+  font-size: 0.8em;
+  margin-top: 0em;
 }
 
 .photo_img
