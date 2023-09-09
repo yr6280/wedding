@@ -10748,8 +10748,8 @@ header.masthead .post-heading .meta a {
 }
 @media (min-width: 992px) {
   header.masthead {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   header.masthead .page-heading h1, header.masthead .page-heading .h1,
   header.masthead .site-heading h1,
@@ -10779,6 +10779,10 @@ header.masthead .post-heading .meta a {
   text-align: center;
 }
 
+.post-preview {
+  text-align: center;
+}
+
 .post-preview > a {
   color: #212529;
 }
@@ -10804,6 +10808,22 @@ header.masthead .post-heading .meta a {
 .post-preview > .post-meta > a {
   text-decoration: none;
 }
+
+.post-preview {
+  font-size: 1.875rem;
+  margin-top: 1.875rem;
+  margin-bottom: 0.625rem;
+  font-family: 'NanumMyeongjo_Y';
+  font-size: 1em;
+}
+.post-preview {
+  font-weight: 300;
+  margin-bottom: 0.625rem;
+  font-family: 'Kopub_batang_L';
+  font-size: 1em;
+}
+
+
 @media (min-width: 992px) {
   .post-preview > a > .post-title {
     font-size: 2.25rem;
