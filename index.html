@@ -381,7 +381,8 @@
                             function acc_copy()
                             {
                                 var account_num = document.getElementById("acc_text").innerText;
-                                window.navigator.clipboard.writeText(account_num); //계좌번호 클립보드에 복사
+                                alert(account_num);
+                                //window.navigator.clipboard.writeText(account_num); //계좌번호 클립보드에 복사
 
                                 document.getElementById("modal_msg").innerText = "복사되었습니다.";
                             }
