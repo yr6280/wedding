@@ -10823,6 +10823,58 @@ header.masthead .post-heading .meta a {
   font-size: 1em;
 }
 
+.map_icon
+{
+  width: 3em;
+  margin: 0em 0.5em;
+  display: inline-block;
+}
+
+.map_icon > a > img
+{
+  border-radius: 1em;
+}
+
+.thank_box
+{
+  display: inline-block;
+  padding: 0em 2em;
+}
+
+.thank_box > p
+{
+  margin: 0.2em;
+}
+
+.thank_box_btn {
+  font-family: 'NanumMyeongjo_Y';
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  margin: 0.3em;
+  border-radius: 0.5em;
+  background-color: #a8caee;
+  border: white;
+}
+
+.post-subtitle
+{
+  letter-spacing: 0.4em;
+}
+
+.photo_img
+{
+  margin: 0.5em 0em;
+}
+
+.photo_img > div > img
+{
+  border-radius: 0.5em;
+}
+
+.photo_img > a > img
+{
+  border-radius: 0.5em;
+}
 
 @media (min-width: 992px) {
   .post-preview > a > .post-title {

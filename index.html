@@ -77,10 +77,11 @@
                             <span style="font-weight: bold; font-size: 1.5rem;">가가가 · 나나나</span>의 장남 <span style="font-weight: bold; font-size: 1.5rem;">정필기</span><br/>
                             <span style="font-weight: bold; font-size: 1.5rem;">다다다 · 라라라</span>의 장녀 <span style="font-weight: bold; font-size: 1.5rem;">김남이</span>
                         </p>
-                        <div style="margin: auto; display:block; width: 4em;">
+                        <br/>
+                        <div style="margin: auto; display:block; width: 3.5em;">
                             <img class="img-fluid" src="assets/img/ring.png" alt="..." />
                         </div>
-                        
+                        <p style="margin: 0.5em; letter-spacing: 0.4em; font-size: 0.7em;">wedding march</p>
                     </div>
                     <!-- 메인소개 끝 -->
 
@@ -90,13 +91,103 @@
                     <!-- Post preview-->
                     <div class="post-preview">
                         <h4 class="post-title">갤러리</h4>
-                        <p class="post-subtitle">We predict too much for the next year and yet far too little for the next ten.</p>
+                        <p class="post-subtitle">우리의 순간</p>
                         
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on August 24, 2023
-                        </p>
+                        <!-- 갤러리 스크립트 -->
+                        <div class="ecommerce-gallery" data-mdb-zoom-effect="true" data-mdb-auto-height="true">
+                            <div class="row py-3 shadow-5">
+                                <script>
+                                    function gallary_main(val)
+                                    {
+                                        var main_component = document.getElementById("main_img");
+                                        var img_scr = "assets/img/gallary/wedding_img" + val + '.jpg';
+                            
+                                        main_component.src = img_scr;
+                                    }
+                                </script>
+
+                                <!--main img-->
+                                <div class="col-12 mb-1 photo_img">
+                                    <div class="lightbox">
+                                        <img id="main_img"
+                                        src="assets/img/gallary/wedding_img1.jpg"
+                                        alt="Gallery image 1"
+                                        class="ecommerce-gallery-main-img active w-100"
+                                        />
+                                    </div>
+                                </div>
+
+                                <hr class="my-4" />
+
+                                <!--sub img-->
+                                <div class="col-3 mt-1 photo_img photo_img">
+                                    <a onclick="gallary_main(1)">
+                                        <img
+                                        src="assets/img/gallary/wedding_img1.jpg"
+                                        alt="Gallery image 1"
+                                        class="active w-100"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-3 mt-1 photo_img">
+                                    <a onclick="gallary_main(2)">
+                                        <img
+                                        src="assets/img/gallary/wedding_img2.jpg"
+                                        alt="Gallery image 2"
+                                        class="active w-100"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-3 mt-1 photo_img">
+                                    <a onclick="gallary_main(3)">
+                                        <img
+                                        src="assets/img/gallary/wedding_img3.jpg"
+                                        alt="Gallery image 3"
+                                        class="active w-100"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-3 mt-1 photo_img">
+                                    <a onclick="gallary_main(4)">
+                                        <img
+                                        src="assets/img/gallary/wedding_img4.jpg"
+                                        alt="Gallery image 4"
+                                        class="active w-100"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div class="col-3 mt-1 photo_img">
+                                    <a onclick="gallary_main(5)">
+                                        <img
+                                        src="assets/img/gallary/wedding_img5.jpg"
+                                        alt="Gallery image 5"
+                                        class="active w-100"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-3 mt-1 photo_img">
+                                    <a onclick="gallary_main(6)">
+                                        <img
+                                        src="assets/img/gallary/wedding_img6.jpg"
+                                        alt="Gallery image 6"
+                                        class="active w-100"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-3 mt-1 photo_img">
+                                    <a onclick="gallary_main(7)">
+                                        <img
+                                        src="assets/img/gallary/wedding_img7.jpg"
+                                        alt="Gallery image 7"
+                                        class="active w-100"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 갤러리 스크립트 끝 -->
+                        
                     </div>
                     <!-- 갤러리 끝-->
 
@@ -108,14 +199,14 @@
                         <h4 class="post-title">오시는 길</h4>
                         <br/>
                         <h4>수원파티웨딩유 0층 뭐뭐뭐홀</h4>
-                        <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
+                        <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em; margin-top: 0%">
                             경기 수원시 권선구 세화로 218<br/>
                             031-297-1000
                         </p>
                         
                         <!-- 지도api -->
-                        <div id="map" style="width:100%;height:350px;"></div>
-
+                        <div id="map" style="width:100%; height:350px; background-color: blanchedalmond;"></div>
+                        
                         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f3b0140629ed817c42e2b163c3544ab0&libraries=services"></script>
                         <script>
                         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -158,71 +249,206 @@
                         
                         <!-- 지도api 끝 -->
 
-                        <div>
+                        <div style="text-align: left; padding: 0em 4em 1em;">
                             <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
                                 <span style="font-weight: bold;">대중교통 이용 시</span><br/>
-                                수원역 4번출구 - 안산,인천방향으로 도보 7분거리
+                                <span style="padding-left: 1em;">수원역 4번출구 - 안산,인천방향으로 도보 7분거리</span>
                             </p>
                             <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
-                                <span style="font-weight: bold;">셔틀버스 이용 시</span><br/>
-                                수원역 지하상가 13번출구<br/>
-                                (인천공항 리무진 타는곳,7770 버스타는 승강장쪽)
+                                <span style="font-weight: bold;">셔틀버스 이용 시</span>
+                                <br/>
+                                <span style="padding-left: 1em;">
+                                    수원역 지하상가 13번출구
+                                </span>
+                                <br/>
+                                <span style="padding-left: 1em;">
+                                    (인천공항 리무진 타는곳,7770 버스타는 승강장쪽)
+                                </span>
+                                
                             </p>
                             <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
-                                <span style="font-weight: bold;">자가 이용 시</span><br/>
-                                수원역에서 인천,안산방향 서수원자동차 검사소 옆 위치<br/>
-                                (당일무료주차 동시700대이상)
+                                <span style="font-weight: bold;">자가 이용 시</span>
+                                <br/>
+                                <span style="padding-left: 1em;">
+                                    수원역에서 인천,안산방향 서수원자동차 검사소 옆 위치
+                                </span>
+                                <br/>
+                                <span style="padding-left: 1em;">
+                                    (당일무료주차 동시700대이상)
+                                </span>
+                                
                             </p>
                         </div>
 
-                        <div style="">
-                            <div style="width: 4em; display: inline-block;">
+                        <!--지도 바로가기 아이콘-->
+                        <div>
+                            <div class="map_icon">
                                 <a href="https://naver.me/FlJxWGlg">
                                     <img class="img-fluid" src="assets/img/naver_map.png" alt="..." />
                                 </a>
                             </div>
-                            <div style="width: 4em; display: inline-block;">
-                                <a href="https://naver.me/FlJxWGlg">
-                                    <img class="img-fluid" src="assets/img/naver_map.png" alt="..." />
+                            <div class="map_icon">
+                                <a href="https://kko.to/lWByx4Sh1P">
+                                    <img class="img-fluid" src="assets/img/kakao_map.png" alt="..." />
+                                </a>
+                            </div>
+                            <div class="map_icon">
+                                <a href="https://surl.tmobiapi.com/df8a822d">
+                                    <img class="img-fluid" src="assets/img/t_map.jpg" alt="..." />
                                 </a>
                             </div>
                         </div>
+                        <!--지도 바로가기 아이콘 끝-->
+
                     </div>
                     <!-- 오시는 길 끝-->
 
-
-
-
-                    <!-- Divider-->
+                    <!-- 마음 전하실 곳 -->
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Science has not yet mastered prophecy</h2>
-                            <h3 class="post-subtitle">We predict too much for the next year and yet far too little for the next ten.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on August 24, 2023
-                        </p>
+                        <h4 class="post-title">마음 전하실 곳</h4>
+                        <p class="post-subtitle">축하해주시는 마음 언제나 감사드립니다</p>
+                        
+                        <!--계좌번호 modal-->
+                        <div class="modal" tabindex="-1" id="acc_modal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <input id="acc_val" value="" hidden="true">
+                                    <div class="modal-header" style="padding: 0em 1em;">
+                                        <p class="modal-title" id="acc_title" style="margin: 0em;">Modal title</p>
+                                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close" onclick="modal_toggle('none')"></button>
+                                    </div>
+                                    <div class="modal-body" id="acc_text">
+                                        <p>Modal body text goes here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <p id="modal_msg"></p>
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" onclick="modal_toggle('none')">닫기</button>
+                                        <button type="button" class="btn btn-primary" onclick="acc_copy()">복사</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--계좌번호 modal 끝-->
+                        <!--계좌번호 modal script-->
+                        <script>
+                            function account_check(val)
+                            {
+                                var acc_val = '';
+                                if(val == 0)
+                                {
+                                    acc_val = document.getElementById("acc_val").value;
+                                }else{
+                                    acc_val = val;
+                                }
+
+                                var acc_text = '';
+                                if(acc_val == 1) //정필기
+                                {
+                                    acc_text = 'AA은행 1234-1111';
+                                    acc_title_text = '<p>신랑 <span style="font-weight: bold; font-size: 1.5rem;">정필기</span></p>';
+                                }else if(acc_val == 2)   //김남이
+                                {
+                                    acc_text = 'BB은행 5678-2222';
+                                    acc_title_text = '<p>신부 <span style="font-weight: bold; font-size: 1.5rem;">김남이</span></p>';
+                                }else if(acc_val == 3)   //신랑측 혼주
+                                {
+                                    acc_text = '가가은행 1111-2222';
+                                    acc_title_text = '<p style="margin-bottom: 0em;">신랑 정필기의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">가가가</span></p>';
+                                    acc_title_text += '<p style="margin-top: 0em;">신랑 정필기의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">나나나</span></p>';
+                                }else if(acc_val == 4)   //신부측 혼주
+                                {
+                                    acc_text = '나나은행 3333-4444';
+                                    acc_title_text = '<p style="margin-bottom: 0em;">신부 김남이의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">다다다</span></p>';
+                                    acc_title_text += '<p style="margin-top: 0em;">신부 김남이의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">라라라</span></p>';
+                                }
+                                
+                                document.getElementById("acc_val").value = acc_val;
+
+                                //modal set
+                                document.getElementById("acc_text").innerText = acc_text;
+                                document.getElementById("acc_title").innerHTML = acc_title_text;
+
+                                modal_toggle('block');
+                            }
+
+                            function modal_toggle(val)
+                            {
+                                document.getElementById("modal_msg").innerText = "";
+                                document.getElementById("acc_modal").style.display = val;
+                            }
+
+                            function acc_copy()
+                            {
+                                var account_num = document.getElementById("acc_text").innerText;
+                                window.navigator.clipboard.writeText(account_num); //계좌번호 클립보드에 복사
+
+                                document.getElementById("modal_msg").innerText = "복사되었습니다.";
+                            }
+                        </script>
+                        <!--계좌번호 modal script 끝-->
+
+                        <!-- 신랑신부 -->
+                        <div>
+                            <div class="thank_box">
+                                <p>
+                                    신랑<br/>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">정필기</span>
+                                </p>
+                                <button class="thank_box_btn" onclick="account_check('1')">계좌번호 확인</button>
+                            </div>
+                            <div class="thank_box">
+                                <p>
+                                    신부<br/>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">김남이</span>
+                                
+                                </p>
+                                <button class="thank_box_btn" onclick="account_check('2')">계좌번호 확인</button>
+                            </div>
+                        </div>
+                        <br/>
+                        <!-- 혼주 -->
+                        <div>
+                            <div class="thank_box">
+                                <p>
+                                    신랑측 혼주<br/>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">가가가</span><br/>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">나나나</span>
+                                </p>
+                                <button class="thank_box_btn" onclick="account_check('3')">계좌번호 확인</button>
+                            </div>
+                            <div class="thank_box">
+                                <p>
+                                    신부측 혼주<br/>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">다다다</span><br/>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">라라라</span>
+                                </p>
+                                <button class="thank_box_btn" onclick="account_check('4')">계좌번호 확인</button>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Divider-->
+                    <!-- 마음 전하실 곳 끝-->
+            
                     <hr class="my-4" />
-                    <!-- Post preview-->
+
+                    <!-- 마지막사진 -->
                     <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Failure is not an option</h2>
-                            <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on July 8, 2023
-                        </p>
+
+                        <div class="container position-relative px-4 px-lg-5" 
+                            style="background-image: url('assets/img/nignt_see.jpg'); opacity: 0.7; background-position: center; background-size: 100%; padding: 1em; border-radius: 0.2em; height: 38em;">
+                            <div class="row gx-4 gx-lg-5 justify-content-center">
+                                <div class="col-md-10 col-lg-8 col-xl-7">
+                                    <div class="page-heading">
+                                        <p style="font-family: 'NanumMyeongjo_Y'; font-size: 1.2rem; color: #090303; padding-bottom: 2em; font-weight: bold; text-align: center; letter-spacing: 0.4em;">
+                                            함께, 서로
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
+                    <!-- 마지막사진 끝 -->
                    
                 </div>
             </div>
@@ -237,33 +463,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2023</div>
+                        <div class="small text-center text-muted fst-italic">wedding march 2023.12.00.</div>
                     </div>
                 </div>
             </div>
