@@ -131,7 +131,7 @@
                         var geocoder = new kakao.maps.services.Geocoder();
 
                         // 주소로 좌표를 검색합니다
-                        geocoder.addressSearch('제주특별자치도 제주시 첨단로 242', function(result, status) {
+                        geocoder.addressSearch('경기 수원시 권선구 세화로 218', function(result, status) {
 
                             // 정상적으로 검색이 완료됐으면 
                             if (status === kakao.maps.services.Status.OK) {
@@ -146,7 +146,7 @@
 
                                 // 인포윈도우로 장소에 대한 설명을 표시합니다
                                 var infowindow = new kakao.maps.InfoWindow({
-                                    content: '<div style="width:150px;text-align:center;padding:6px 0;">우리회사</div>'
+                                    content: '<div style="width:150px;text-align:center;padding:6px 0;">수원 파티웨딩유</div>'
                                 });
                                 infowindow.open(map, marker);
 
@@ -156,23 +156,24 @@
                         });    
                         </script>
                         
-<!-- 지도api 끝 -->
+                        <!-- 지도api 끝 -->
 
-                        
-                        <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
-                            <span style="font-weight: bold;">대중교통 이용 시</span><br/>
-                            수원역 4번출구 - 안산,인천방향으로 도보 7분거리
-                        </p>
-                        <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
-                            <span style="font-weight: bold;">셔틀버스 이용 시</span><br/>
-                            수원역 지하상가 13번출구<br/>
-                            (인천공항 리무진 타는곳,7770 버스타는 승강장쪽)
-                        </p>
-                        <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
-                            <span style="font-weight: bold;">자가 이용 시</span><br/>
-                            수원역에서 인천,안산방향 서수원자동차 검사소 옆 위치<br/>
-                            (당일무료주차 동시700대이상)
-                        </p>
+                        <div>
+                            <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
+                                <span style="font-weight: bold;">대중교통 이용 시</span><br/>
+                                수원역 4번출구 - 안산,인천방향으로 도보 7분거리
+                            </p>
+                            <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
+                                <span style="font-weight: bold;">셔틀버스 이용 시</span><br/>
+                                수원역 지하상가 13번출구<br/>
+                                (인천공항 리무진 타는곳,7770 버스타는 승강장쪽)
+                            </p>
+                            <p style="font-family: 'Kopub_batang_L'; font-size: 0.8em;">
+                                <span style="font-weight: bold;">자가 이용 시</span><br/>
+                                수원역에서 인천,안산방향 서수원자동차 검사소 옆 위치<br/>
+                                (당일무료주차 동시700대이상)
+                            </p>
+                        </div>
 
                         <div style="">
                             <div style="width: 4em; display: inline-block;">
