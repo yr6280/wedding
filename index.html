@@ -393,18 +393,30 @@
                             <div class="thank_box">
                                 <p>
                                     신랑측 혼주<br/>
-                                    <span style="font-weight: bold; font-size: 1.5rem;">가가가</span><br/>
-                                    <span style="font-weight: bold; font-size: 1.5rem;">나나나</span>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">정찬헌</span>
                                 </p>
                                 <button class="thank_box_btn blue_btn" onclick="account_check('3')">계좌번호 확인</button>
                             </div>
                             <div class="thank_box">
                                 <p>
                                     신부측 혼주<br/>
-                                    <span style="font-weight: bold; font-size: 1.5rem;">다다다</span><br/>
-                                    <span style="font-weight: bold; font-size: 1.5rem;">라라라</span>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">김관문</span>
                                 </p>
                                 <button class="thank_box_btn pink_btn" onclick="account_check('4')">계좌번호 확인</button>
+                            </div>
+                        </div>
+						<div>
+                            <div class="thank_box">
+                                <p>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">박애영</span>
+                                </p>
+                                <button class="thank_box_btn blue_btn" onclick="account_check('5')">계좌번호 확인</button>
+                            </div>
+                            <div class="thank_box">
+                                <p>
+                                    <span style="font-weight: bold; font-size: 1.5rem;">이선순</span>
+                                </p>
+                                <button class="thank_box_btn pink_btn" onclick="account_check('6')">계좌번호 확인</button>
                             </div>
                         </div>
                     </div>
@@ -448,22 +460,28 @@
                             var acc_text = '';
                             if(acc_val == 1) //정필기
                             {
-                                acc_text = '국민 57370104058636 정필기';
+                                acc_text = '국민 57370104058636';
                                 acc_title_text = '<p>신랑 <span style="font-weight: bold; font-size: 1.5rem;">정필기</span></p>';
                             }else if(acc_val == 2)   //김남이
                             {
-                                acc_text = '우리 1002863602057 김남이';
+                                acc_text = '우리 1002863602057';
                                 acc_title_text = '<p>신부 <span style="font-weight: bold; font-size: 1.5rem;">김남이</span></p>';
-                            }else if(acc_val == 3)   //신랑측 혼주
+                            }else if(acc_val == 3)   //신랑측 혼주 - 정찬헌
                             {
-                                acc_text = '가가은행 1111-2222';
-                                acc_title_text = '<p style="margin-bottom: 0em;">신랑 정필기의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">가가가</span></p>';
-                                acc_title_text += '<p style="margin-top: 0em;">신랑 정필기의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">나나나</span></p>';
-                            }else if(acc_val == 4)   //신부측 혼주
+                                acc_text = '기업 51901963501019';
+                                acc_title_text = '<p>신랑 정필기의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">정찬헌</span></p>';
+                            }else if(acc_val == 4)   //신부측 혼주 - 김관문
                             {
-                                acc_text = '나나은행 3333-4444';
-                                acc_title_text = '<p style="margin-bottom: 0em;">신부 김남이의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">다다다</span></p>';
-                                acc_title_text += '<p style="margin-top: 0em;">신부 김남이의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">라라라</span></p>';
+                                acc_text = '우리 135 019823 02 001';
+                                acc_title_text = '<p>신부 김남이의 아버지 <span style="font-weight: bold; font-size: 1.5rem;">김관문</span></p>';
+                            }else if(acc_val == 5)   //신랑측 혼주 - 박애영
+                            {
+                                acc_text = '기업 11405090802018';
+                                acc_title_text = '<p>신랑 정필기의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">박애영</span></p>';
+                            }else if(acc_val == 6)   //신부측 혼주 - 이선순
+                            {
+                                acc_text = '우리 799 156793 02 001';
+                                acc_title_text = '<p>신부 김남이의 어머니 <span style="font-weight: bold; font-size: 1.5rem;">이선순</span></p>';
                             }
                             
                             document.getElementById("acc_val").value = acc_val;
