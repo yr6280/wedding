@@ -27,7 +27,14 @@
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-
+						
+						<div style="text-align: center;">
+							<button class="thank_box_btn blue_btn" onclick="font_size_set('p')">글씨 키우기</button>
+							<button class="thank_box_btn pink_btn" onclick="font_size_set()">글씨 줄이기</button>
+						</div>
+						
+						<br/><br/>
+						
                         <div style="text-align: center;">
                             <img style="max-width: 8%;" src="assets/img/botanica.png">
                         </div>
@@ -37,7 +44,22 @@
                     
                         
                         <br/>
+						
+						<script>
+							function font_size_set(val)
+							{
+								var element = document.querySelector('body');
+								if(val == 'p')
+								{
+									element.classList.add('font_plus');
+								}else{
 
+									element.classList.remove('font_plus');
+								}
+								
+							}
+						</script>
+		
                         <div class="site-heading">
                             <div class="post-preview" style="border-left: 1px solid #090303;">
                                 <p style="font-family: 'kcc'; font-size: 1.8rem; color: #090303; padding-left: 10px; text-align: left;">
@@ -315,8 +337,9 @@
 								} 
 							});    
                         </script>
+						
                         <!-- 지도api 끝 -->
-
+			
                         <div style="text-align: left; padding: 0em 2em 1em;">
                             <p style="font-family: 'gowunBatang'; font-size: 0.8em;">
                                 <span style="font-size: 1.2em; font-weight: bold;">대중교통 이용 시</span>

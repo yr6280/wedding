@@ -100,7 +100,7 @@
 }
 @font-face { /* 고운바탕 폰트 적용 */
   font-family: "gowunBatang";
-  src: url("../font/GowunBatang-Regular.ttf.ttf");
+  src: url("../font/GowunBatang-Regular.ttf");
 }
 @font-face { /* kcc은영체 폰트 적용 */
   font-family: "kcc";
@@ -10928,4 +10928,9 @@ header.masthead .post-heading .meta a {
 *
 {
 	font-family: 'suite';
+}
+
+.font_plus
+{
+	font-size: xx-large;
 }
