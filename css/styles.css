@@ -10922,7 +10922,7 @@ header.masthead .post-heading .meta a {
 .post-subtitle
 {
 	font-family: 'kcc';
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 *
@@ -10933,4 +10933,9 @@ header.masthead .post-heading .meta a {
 .font_plus
 {
 	font-size: xx-large;
+}
+
+.thank_div
+{
+	display: inline-grid;
 }
