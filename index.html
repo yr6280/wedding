@@ -275,7 +275,7 @@
                         
                         <!-- 지도api -->
                         <div id="map" style="width:100%; height:350px; background-color: blanchedalmond;"></div>
-                        						
+                        
                         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f3b0140629ed817c42e2b163c3544ab0&libraries=services"></script>
                         <script>
 							var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -315,7 +315,6 @@
 								} 
 							});    
                         </script>
-                        
                         <!-- 지도api 끝 -->
 
                         <div style="text-align: left; padding: 0em 2em 1em;">
@@ -368,7 +367,7 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <h4 class="post-title">마음 전하실 곳</h4>
+                        <h4 class="post-title" style="font-family: 'gowunBatang';">마음 전하실 곳</h4>
                         <p class="post-subtitle">축하의 마음 언제나 감사드립니다</p>
 
                         <!-- 신랑신부 -->
@@ -433,9 +432,10 @@
                                     <p class="modal-title" id="acc_title" style="margin: 0em;">Modal title</p>
                                     <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close" onclick="modal_toggle('none')"></button>
                                 </div>
-                                <div class="modal-body" >
+                                <div class="modal-body" style="margin: 1em;">
                                     <input type='text' id="account" value="" style="position:absolute; left:-9999px">
-                                    <p style="padding-left: 1em;" id="acc_text"></p>
+                                    <p class="thank_box_name" style="margin: 0%;" id="acc_name"></p>
+									<p style="margin: 0%;" id="acc_text"></p>
                                 </div>
                                 <div class="modal-footer">
                                     <p id="modal_msg" style="font-size: 0.8em;"></p>
@@ -462,34 +462,41 @@
                             var acc_text = '';
                             if(acc_val == 1) //정필기
                             {
+								acc_name = '정필기';
                                 acc_text = '국민 57370104058636';
-                                acc_title_text = '<p>신랑  <span class="thank_box_name">정필기</span></p>';
+                                acc_title_text = '<p>신랑</p>';
                             }else if(acc_val == 2)   //김남이
                             {
+								acc_name = '김남이';
                                 acc_text = '우리 1002863602057';
-                                acc_title_text = '<p>신부  <span class="thank_box_name">김남이</span></p>';
+                                acc_title_text = '<p>신부</p>';
                             }else if(acc_val == 3)   //신랑측 혼주 - 정찬헌
                             {
+								acc_name = '정찬헌';
                                 acc_text = '기업 51901963501019';
-                                acc_title_text = '<p>신랑 정필기의 아버지  <span class="thank_box_name">정찬헌</span></p>';
+                                acc_title_text = '<p>신랑 정필기의 아버지</p>';
                             }else if(acc_val == 4)   //신부측 혼주 - 김관문
                             {
+								acc_name = '김관문';
                                 acc_text = '우리 135 019823 02 001';
-                                acc_title_text = '<p>신부 김남이의 아버지  <span class="thank_box_name">김관문</span></p>';
+                                acc_title_text = '<p>신부 김남이의 아버지</p>';
                             }else if(acc_val == 5)   //신랑측 혼주 - 박애영
                             {
+								acc_name = '박애영';
                                 acc_text = '기업 11405090802018';
-                                acc_title_text = '<p>신랑 정필기의 어머니  <span class="thank_box_name">박애영</span></p>';
+                                acc_title_text = '<p>신랑 정필기의 어머니</p>';
                             }else if(acc_val == 6)   //신부측 혼주 - 이선순
                             {
+								acc_name = '이선순';
                                 acc_text = '우리 799 156793 02 001';
-                                acc_title_text = '<p>신부 김남이의 어머니  <span class="thank_box_name">이선순</span></p>';
+                                acc_title_text = '<p>신부 김남이의 어머니</p>';
                             }
                             
                             document.getElementById("acc_val").value = acc_val;
 
                             //modal set
-                            document.getElementById("acc_text").innerText = acc_text;
+							document.getElementById("acc_name").innerHTML = acc_name;
+                            document.getElementById("acc_text").innerHTML = acc_text;
                             document.getElementById("acc_title").innerHTML = acc_title_text;
                             document.getElementById("account").value = acc_text;
 

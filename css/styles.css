@@ -10881,9 +10881,8 @@ header.masthead .post-heading .meta a {
 
 .thank_box_name
 {
-	font-family: 'kcc';
 	font-weight: bold;
-	font-size: 2.1rem;
+	font-size: 1.6rem;
 }
 
 .post-subtitle
@@ -10922,7 +10921,8 @@ header.masthead .post-heading .meta a {
 
 .post-subtitle
 {
-	font-family: 'gowunBatang';
+	font-family: 'kcc';
+	font-size: 1.2em;
 }
 
 *
