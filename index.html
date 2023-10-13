@@ -45,20 +45,19 @@
                         
                         <br/>
 						
-						<script>
-							function font_size_set(val)
-							{
-								var element = document.querySelector('body');
-								if(val == 'p')
-								{
-									element.classList.add('font_plus');
-								}else{
-
-									element.classList.remove('font_plus');
-								}
-								
-							}
-						</script>
+			<script>
+				function font_size_set(val)
+				{
+					var element = document.querySelector('body');
+					if(val == 'p')
+					{
+						element.classList.add('font_plus');
+					}else{
+	
+						element.classList.remove('font_plus');
+					}
+				}
+			</script>
 		
                         <div class="site-heading">
                             <div class="post-preview" style="border-left: 1px solid #090303;">
@@ -83,6 +82,13 @@
                     </div>
                 </div>
             </div>
+
+	<br/>
+	<div class="site-heading">
+	    <p style="font-family: 'kcc'; font-size: 1.8rem; margin: 0.5em; color: #090303; text-align: center;">
+		<span id="d_t_day" style="font-family: 'kcc'; font-size: 1.5em; font-weight: bold;">000</span>일 후에 뵈어요!
+	    </p>
+	</div>
 
         </header>
         <!-- Main Content-->
@@ -115,11 +121,11 @@
                             12월 16일 오늘, 부부의 걸음을 시작합니다.
                             <br/>
                             <br/>
-                            추운 겨울이지만 찾아준 하객분들의 감사한 마음과 서로를 향한 다정한 마음이<br/>
+                            추운 겨울에도 찾아오신 하객분들의 감사한 마음과 서로를 향한 다정한 마음이<br/>
                             그 날의 봄처럼 더없이 따뜻하겠습니다.
                             <br/>
                             <br/>
-                            그리고 기쁜 날 함께하지 못하신 분들도 보내주시는 축하와 응원으로 두 사람의 삶을<br/>
+                            기쁜 날 함께하지 못하신 분들이 보내주시는 축하와 응원을 더해해 두 사람의 삶을<br/>
                             다부지게 꾸려가겠습니다.
                             <br/>
                             <br/>
@@ -155,8 +161,26 @@
                             document.getElementById("d_day").innerText = elapsedDay;
                         }
 
+			function d_t_days()
+                        {
+			    var today = new Date();
+
+                            var year = today.getFullYear();
+                            var month = ('0' + (today.getMonth() + 1)).slice(-2);
+                            var day = ('0' + today.getDate()).slice(-2);
+
+                            const d_t_date1 = new Date(2023, 12, 16);
+                            const d_t_date2 = new Date(year, month, day);
+                            
+                            const d_t_elapsedMSec = d_t_date1.getTime() - d_t_date2.getTime(); // 172800000
+                            const d_t_elapsedDay = d_t_elapsedMSec / 1000 / 60 / 60 / 24; // 2
+                            
+                            document.getElementById("d_t_day").innerText = d_t_elapsedDay;
+			}
+
                         window.onload = function() {
                             d_days();
+			    d_t_days();
                         };
                     </script>
                     <!-- 메인소개 끝 -->
