@@ -84,9 +84,14 @@
             </div>
 
 	<br/>
-	<div class="site-heading">
+	<div id="d_t1" style="" class="site-heading">
 	    <p style="font-family: 'kcc'; font-size: 1.8rem; margin: 0.5em; color: #090303; text-align: center;">
-		<span id="d_t_day" style="font-family: 'kcc'; font-size: 1.5em; font-weight: bold;">000</span>일 후에 뵈어요!
+			<span id="d_t_day" style="font-family: 'kcc'; font-size: 1.5em; font-weight: bold;">000</span>일 후에 뵈어요!
+	    </p>
+	</div>
+	<div id="d_t2" style="" class="site-heading">
+		<p id="d_t_msg" style="font-family: 'kcc'; font-size: 1.8rem; margin: 0.5em; color: #090303; text-align: center;">
+			추운 날 조심히 찾아와주세요, 감사합니다.
 	    </p>
 	</div>
 
@@ -173,9 +178,26 @@
                             const d_t_date2 = new Date(year, month, day);
                             
                             const d_t_elapsedMSec = d_t_date1.getTime() - d_t_date2.getTime(); // 172800000
-                            const d_t_elapsedDay = d_t_elapsedMSec / 1000 / 60 / 60 / 24; // 2
+                            let d_t_elapsedDay = d_t_elapsedMSec / 1000 / 60 / 60 / 24; // 2
+							
+							if(d_t_elapsedDay == 0)
+							{
+								document.getElementById("d_t1").style.display="none";
+								document.getElementById("d_t2").style.display="";
+								document.getElementById("d_t_msg").innerText = "추운 날 조심히 찾아와주세요, 감사합니다.";
+							}else if(d_t_elapsedDay < 0)
+							{
+								document.getElementById("d_t1").style.display="none";
+								document.getElementById("d_t2").style.display="";
+								document.getElementById("d_t_msg").innerText = "감사합니다.";
+							}else if(d_t_elapsedDay > 0)
+							{
+								document.getElementById("d_t1").style.display="";
+								document.getElementById("d_t2").style.display="none";
+								document.getElementById("d_t_day").innerText = d_t_elapsedDay;
+							}
                             
-                            document.getElementById("d_t_day").innerText = d_t_elapsedDay;
+                            
 			}
 
                         window.onload = function() {
